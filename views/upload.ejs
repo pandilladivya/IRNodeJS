@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+This is upload page<br>
+Data from form is
+<table>
+    <% for(var i=0; i < items.length; i++) { %>
+    <tr>
+        <td><%= items[i].ipstr %></td>
+        <td><%= items[i].file %></td>
+    </tr>
+    <% } %>
+</table>
+</body>
+</html>
