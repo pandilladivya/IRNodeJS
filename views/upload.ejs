@@ -9,8 +9,8 @@ Data from form is
 <table>
     <% for(var i=0; i < items.length; i++) { %>
     <tr>
-        <td><%= items[i].ipstr %></td>
-        <td><%= items[i].file %></td>
+
+        <td><%= JSON.stringify(items[i].file) %></td>
     </tr>
     <% } %>
 </table>
