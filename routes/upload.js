@@ -34,31 +34,9 @@ router.post('/',upload.single('pics'),function(req, res, next){
             }
             res.json(data);
         });
-    }
-    else
-    {
+    } else {
         res.json({"Error" :{"Message":"Please send only gif files"}});
     }
-
-
-    /*mongo.connect(URL,function(err,db){
-        if(err)
-        {
-            res.json("Error",err);
-        }else{
-            db.collection('file_data').insertOne(data,function(err,result){
-                if(err)
-                {
-                    res.json("Error",err);
-                }else {
-                    res.json(data);
-                    db.close();
-                }
-            });
-        }
-
-    });*/
-
 });
 
 /*
@@ -73,30 +51,6 @@ router.get('/',function(req,res,next){
         }
         res.json(data);
     });
-
-
-
-    /*
-    var resultArray = [];
-    mongo.connect(URL,function(err,db){
-        if(err)
-        {
-            res.json("Error",err);
-        }else {
-            var cursor = db.collection('file_data').find();
-            cursor.forEach(function (document, err) {
-                if(err)
-                {
-                    res.json("Error",err);
-                }else {
-                    resultArray.push(document);
-                }
-            }, function () {
-                db.close();
-                res.json(resultArray);
-            });
-        }
-    });*/
 });
 
 module.exports = router;
